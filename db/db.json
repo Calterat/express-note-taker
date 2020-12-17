@@ -1,12 +1,29 @@
 {
   "notes": [
     {
-      "title":"Test Title",
-      "text":"Test text"
+      "id": "0",
+      "title": "Test Title",
+      "text": "Test text"
     },
     {
-      "title":"anotherTitle",
-      "text":"anotherText"
+      "id": "1",
+      "title": "anotherTitle",
+      "text": "anotherText"
+    },
+    {
+      "title": "Smashing",
+      "text": "Success",
+      "id": "zFuux219EKL06bMkTLyu"
+    },
+    {
+      "title": "moreSmashing",
+      "text": "withMoreSuccess",
+      "id": "RkObA0TEPbGL2XBVi0Rb"
+    },
+    {
+      "title": "moreSmashing",
+      "text": "allNightLong",
+      "id": "gTOoORGmYohmlaR4r0El"
     }
   ]
 }

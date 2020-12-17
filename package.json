@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "create-id": "^1.0.2",
     "express": "^4.16.4",
     "jest": "^26.6.3"
   }
