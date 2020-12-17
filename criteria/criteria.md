@@ -51,14 +51,14 @@ DELETE route
 
 ### Techinical Acceptance Criteria: 40%
 
-* Satifies all of the preciding acceptance criteria plus the following:
+* Satifies all of the preceeding acceptance criteria plus the following:
   * Application front end must connect to an Express.js back end.
   * Application back end must store notes with unique IDs in a JSON file.
   * Application must be deployed to Heroku
 
 ### Deployment: 36%
 
-* Apllication deployed at live URL.
+* Application deployed at live URL.
 * Application loads with no errors.
 * Application GitHub URL submitted.
 * GitHub repository contains application code.
