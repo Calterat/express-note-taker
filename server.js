@@ -55,6 +55,10 @@ app.post('/api/notes', (req, res) => {
   }
 })
 
+app.delete('/api/notes', (req, res) => {
+  console.log(req);
+})
+
 const PORT = process.env.PORT || 3001;
 
 app.listen(3001, () => {
