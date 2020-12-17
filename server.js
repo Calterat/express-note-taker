@@ -33,6 +33,13 @@ const validateNote = (note) => {
   return true;
 }
 
+const deleteById = (id, notesArray) => {
+  const deleted = notesArray.splice(notesArray.findIndex(obj => obj.id === id), 1);
+  fs.writeFileSync('./db/db.json', JSON.stringify({ notes: notesArray }, null, 2));
+  return notesArray;
+}
+
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
 })
@@ -55,8 +62,9 @@ app.post('/api/notes', (req, res) => {
   }
 })
 
-app.delete('/api/notes', (req, res) => {
-  console.log(req);
+app.delete('/api/notes/:id', (req, res) => {
+  const newNotesArray = deleteById(req.params.id, notes);
+  res.json(newNotesArray);
 })
 
 const PORT = process.env.PORT || 3001;
