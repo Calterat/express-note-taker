@@ -5,9 +5,6 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
-
-console.log(process.env.PORT);
 
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
@@ -47,6 +44,8 @@ app.post('/api/notes', (req, res) => {
     res.status(400).send("The note isn't complete!");
   }
 })
+
+const PORT = process.env.PORT || 3001;
 
 app.listen(3001, () => {
   console.log(`API server now on port ${PORT}!`);
