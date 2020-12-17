@@ -5,7 +5,9 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = 80;
+const PORT = process.env.PORT || 3001;
+
+console.log(process.env.PORT);
 
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
