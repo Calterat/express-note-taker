@@ -3,10 +3,12 @@ const { createNote, validateNote, deleteById } = require('../../lib/notes');
 const { notes } = require('../../db/db')
 const createId = require('create-id');
 
-router.get('/notes', (req, res) => {
+// for retreiving notes from the databas
+router.get('/notes', (_req, res) => {
   res.json(notes);
 })
 
+// For saving notes to the database
 router.post('/notes', (req, res) => {
   req.body.id = createId();
   if (validateNote(req.body)) {
@@ -17,10 +19,12 @@ router.post('/notes', (req, res) => {
   }
 })
 
+// for deleting notes in the database
 router.delete('/notes/:id', (req, res) => {
   const newNotesArray = deleteById(req.params.id, notes);
   res.json(newNotesArray);
 })
 
+// export router
 module.exports = router;
 

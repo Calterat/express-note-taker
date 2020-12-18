@@ -1,9 +1,12 @@
+/* defaults */
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
+/* icons */
 .save-note {
   display: none;
 }
@@ -15,6 +18,7 @@ html, body {
   cursor: pointer;
 }
 
+/* notes */
 .note-textarea, .note-title {
   color: #000000;
   width: 100%;
