@@ -15,3 +15,26 @@ test('Create a Note', () => {
   expect(note.title).toBe("Test Title");
   expect(note.text).toBe("Test text");
 })
+
+test('Validates the data for the API', () => {
+  const note = 
+  {
+    "id": createId(),
+    "title": "Test Title",
+    "text": "Test text"
+  }
+
+  const invalidNote = 
+  {
+    "id": createId(),
+    "title": "Test Title"
+  }
+
+  const result1 = validateNote(note);
+  const result2 = validateNote(invalidNote);
+
+  expect(result1).toBe(true);
+  expect(result2).toBe(false);
+})
+
+// test('')
