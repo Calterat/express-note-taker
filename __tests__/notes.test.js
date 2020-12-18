@@ -37,4 +37,10 @@ test('Validates the data for the API', () => {
   expect(result2).toBe(false);
 })
 
-// test('')
+test('Deletes a post', () => {
+  const id = "0"
+  const newNoteArray = [...notes];
+  result1 = deleteById(id, newNoteArray);
+
+  expect(result1.length).toBeLessThan(notes.length);
+})
